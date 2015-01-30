@@ -139,13 +139,14 @@ public class ExhibitorMain implements Closeable
         
        if( httpsPort != 0 ){
         		SslSocketConnector sslconnector = new SslSocketConnector();
-        		System.out.println(" SSL arguments key: " + sslArguments.getKeystore() +  " pass : " + sslArguments.getKeystorePassword());
-        		System.out.println(" SSL arguments trust: " + sslArguments.getTruststore() +  " pass : " + sslArguments.getTrustPassword());
-        	 	sslconnector.setKeystore(sslArguments.getKeystore());
-        	 	sslconnector.setKeyPassword(sslArguments.getKeystorePassword());
-        	 	sslconnector.setTruststore(sslArguments.getTruststore());
-        	 	sslconnector.setTrustPassword(sslArguments.getTrustPassword());
-        	 	sslconnector.setPort(httpsPort);
+        		
+        		if(sslArguments.getKeystore() != null ){
+        			sslconnector.setKeystore(sslArguments.getKeystore());
+        		}	
+        		sslconnector.setKeyPassword(sslArguments.getKeystorePassword());
+        		sslconnector.setTruststore(sslArguments.getTruststore());
+        		sslconnector.setTrustPassword(sslArguments.getTrustPassword());
+        		sslconnector.setPort(httpsPort);
         	 	server.addConnector(sslconnector);
         }
         
