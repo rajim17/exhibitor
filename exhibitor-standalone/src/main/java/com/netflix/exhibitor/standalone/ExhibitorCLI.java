@@ -188,9 +188,9 @@ public class ExhibitorCLI
         Options sslOptions = new Options();
         sslOptions.addOption(null, HTTPS_PORT, true , "HTTPS port to listen.");
         sslOptions.addOption(null, KEYSTORE, true , "KeyStore File Location. Default will be user.home/.keystore");
-        sslOptions.addOption(null, KEYSTORE_PASSWORD, true , "HTTPS port to listen.");
-        sslOptions.addOption(null, TRUSTSTORE, true , "HTTPS port to listen.");
-        sslOptions.addOption(null, TRUSTSTORE_PASSWORD, true , "HTTPS port to listen.");
+        sslOptions.addOption(null, KEYSTORE_PASSWORD, true , "KEYSTORE PASSWORD");
+        sslOptions.addOption(null, TRUSTSTORE, true , "Truststore File location. Default will be KEYSTORE.");
+        sslOptions.addOption(null, TRUSTSTORE_PASSWORD, true , "Truststore password. Default will be KEYSTORE_PASSWORD.");
         
         
 
