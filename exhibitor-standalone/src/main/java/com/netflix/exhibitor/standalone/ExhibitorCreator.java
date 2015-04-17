@@ -201,8 +201,8 @@ public class ExhibitorCreator
         int httpsPort = Integer.parseInt(commandLine.getOptionValue(HTTPS_PORT, "443"));
         keystore = commandLine.getOptionValue(KEYSTORE);
         keystorePassword = commandLine.getOptionValue(KEYSTORE_PASSWORD);
-        truststore = commandLine.getOptionValue(TRUSTSTORE);
-        truststorePassword = commandLine.getOptionValue(TRUSTSTORE_PASSWORD);
+        truststore = commandLine.getOptionValue(TRUSTSTORE) != null ? commandLine.getOptionValue(TRUSTSTORE) :keystore;
+        truststorePassword = commandLine.getOptionValue(TRUSTSTORE_PASSWORD) != null ? commandLine.getOptionValue(TRUSTSTORE_PASSWORD) :keystorePassword;
 
         String      aclId = commandLine.getOptionValue(ACL_ID);
         String      aclScheme = commandLine.getOptionValue(ACL_SCHEME);

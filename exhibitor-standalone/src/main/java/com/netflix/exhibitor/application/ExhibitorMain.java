@@ -36,8 +36,6 @@ import com.sun.jersey.api.client.filter.ClientFilter;
 import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 import com.sun.jersey.api.client.filter.HTTPDigestAuthFilter;
 import com.sun.jersey.api.core.DefaultResourceConfig;
-import com.sun.jersey.spi.container.servlet.ServletContainer;
-import org.mortbay.jetty.Connector;
 import org.apache.curator.utils.CloseableUtils;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.handler.ContextHandler;
